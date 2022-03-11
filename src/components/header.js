@@ -23,5 +23,4 @@ function Header() {
   );
 }
 
-const MemoizedHeader = React.memo(Header);
-export default MemoizedHeader;
+export default React.memo(Header);

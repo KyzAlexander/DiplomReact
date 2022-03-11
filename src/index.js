@@ -3,12 +3,12 @@ import ReactDOM from "react-dom";
 import "./index.css";
 
 import reportWebVitals from "./reportWebVitals";
-import MemoizedHeader from "./components/header.js";
+import Header from "./components/header.js";
 import RepositoryList from "./components/RepositoryList.js";
 
 ReactDOM.render(
   <React.StrictMode>
-    <MemoizedHeader />
+    <Header />
     <RepositoryList />
   </React.StrictMode>,
   document.getElementById("root")
