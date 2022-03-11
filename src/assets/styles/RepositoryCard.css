@@ -1,9 +1,9 @@
-.cardRepository {
+.repositoryCard {
   display: flex;
   flex-direction: column;
   max-width: 500px;
 }
-.cardRepository__title {
+.repositoryCard__title {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -20,7 +20,7 @@
   border-color: rgb(163, 161, 161);
   border-radius: 10px;
 }
-.cardRepository__subtitle {
+.repositoryCard__subtitle {
   display: flex;
   flex-direction: row;
   justify-content: space-between;

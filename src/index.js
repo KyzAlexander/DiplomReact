@@ -3,13 +3,13 @@ import ReactDOM from "react-dom";
 import "./index.css";
 
 import reportWebVitals from "./reportWebVitals";
-import Header from "./components/header.js";
-import CardRepository from "./components/cardRepository.js";
+import MemoizedHeader from "./components/header.js";
+import RepositoryList from "./components/RepositoryList.js";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Header />
-    <CardRepository />
+    <MemoizedHeader />
+    <RepositoryList />
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -1,6 +1,7 @@
-import "../assets/styles/cardRepository.css";
+import React from "react";
+import "../assets/styles/RepositoryCard.css";
 
-function CardRepository() {
+function RepositoryCard() {
   const repos = [
     {
       name: "HomeWork",
@@ -12,12 +13,12 @@ function CardRepository() {
   ];
   let res = repos.map((item) => {
     return (
-      <section className='cardRepository'>
-        <div className='cardRepository__title'>
+      <section className='repositoryCard'>
+        <div className='repositoryCard__title'>
           <h2 className='title__name'>{item.name}</h2>
           <p className='title__access'>{item.access}</p>
         </div>
-        <div className='cardRepository__subtitle'>
+        <div className='repositoryCard__subtitle'>
           <p className='subtitle__type'>{item.type}</p>
           <p className='subtitle__lastCommitData'>{item.lastCommitData}</p>
           <p className='subtitle__autor'>{item.autor}</p>
@@ -25,7 +26,8 @@ function CardRepository() {
       </section>
     );
   });
-  return <div>{res}</div>;
+  return <li>{res}</li>;
 }
 
-export default CardRepository;
+const MemoizedRepositoryCard = React.memo(RepositoryCard);
+export default MemoizedRepositoryCard;

@@ -1,3 +1,4 @@
+import React from "react";
 import "../assets/styles/header.css";
 import logo from "../assets/images/logo.png";
 
@@ -22,4 +23,5 @@ function Header() {
   );
 }
 
-export default Header;
+const MemoizedHeader = React.memo(Header);
+export default MemoizedHeader;
