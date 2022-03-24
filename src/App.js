@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+// import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
+// import Pagination from "./components/Paginations/Pagination";
+// import { useMemo } from "react";
+// import RepositoryCard from "./components/RepositoryCard/RepositoryCard";
+// import Header from "./components/header/header";
+// import RepositoryList from "./components/RepositoryList/RepositoryList";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  // тот который был до добавления Pagination
+  return <div className='App'></div>;
 }
+
+// function App() {
+//   // const store = useMemo(() => {
+//   //   return createAplicationStore();
+//   // }, []);
+//   return (
+//     // <Provider store={store}>
+//     <BrowserRouter>
+//       <Header />
+//       <RepositoryList />
+//       <div>
+//         <Pagination />
+//         <Link to={"/RepositoryPage"}> Ссыла на репо</Link>
+//       </div>
+//       <Switch>
+//         <Route path='/Repos/:id' component={RepositoryCard}></Route>
+//         <Route path='/' exact={true}>
+//           {/* <HomePage />
+//             <TopRepo /> */}
+//         </Route>
+//         <Route path='/Repos/pages/:page' component={RepositoryCard}></Route>
+
+//         {/* <Route path="/RepositoryPage">
+//           <RepositoryPage />
+//         </Route> */}
+//       </Switch>
+//     </BrowserRouter>
+//     // </Provider>
+//   );
+// }
 
 export default App;
