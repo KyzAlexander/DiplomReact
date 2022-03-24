@@ -1,11 +1,11 @@
 .header {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   align-items: center;
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: rgb(88, 228, 146);
+  padding-left: 50px;
+  background-color: rgb(58, 76, 179);
 }
 
 .header__wrapperLogoAndTitle {
@@ -18,4 +18,10 @@
   width: 40px;
   height: 40px;
   margin-right: 10px;
+}
+.wrapperInput__textField {
+  background-color: rgb(58, 76, 179);
+  border: 1px, groove;
+  border-radius: 5px;
+  margin-left: 10px;
 }

@@ -13,7 +13,7 @@ function Header() {
           >
             <img src={logo} alt='site logo'></img>
           </a>
-          <h1 className='wrapperLogoAndTitle__title'>Git Fake Alex</h1>
+          {/* <h1 className='wrapperLogoAndTitle__title'>Git Fake Alex</h1> */}
         </div>
         <div className='header__wrapperInput'>
           <input className='wrapperInput__textField'></input>
