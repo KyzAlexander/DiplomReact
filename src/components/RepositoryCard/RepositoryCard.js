@@ -1,5 +1,6 @@
 import React from "react";
-import "../assets/styles/RepositoryCard.css";
+import "./RepositoryCard.css";
+import star from "../../assets/images/star.png";
 
 function RepositoryCard(props) {
   return (
@@ -7,6 +8,7 @@ function RepositoryCard(props) {
       <div className='repositoryCard__title'>
         <h2 className='title__name'>{props.name}</h2>
         <p className='title__access'>{props.access}</p>
+        <img className='title__img' src={star} alt='number of stars'></img>
       </div>
       <div className='repositoryCard__subtitle'>
         <p className='subtitle__type'>{props.type}</p>

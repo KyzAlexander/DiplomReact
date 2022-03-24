@@ -1,4 +1,4 @@
-import RepositoryCard from "./RepositoryCard.js";
+import RepositoryCard from "../RepositoryCard/RepositoryCard.js";
 
 function RepositoryList() {
   const repos = [

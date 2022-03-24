@@ -32,3 +32,7 @@
   border-bottom-style: solid;
   border-color: rgb(209, 209, 6);
 }
+.title__img {
+  width: 20px;
+  height: 20px;
+}
