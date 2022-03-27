@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./pagination.css";
-import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 function PageButton(props) {
@@ -8,8 +8,8 @@ function PageButton(props) {
   const pageNumber = props.pageNumber;
   return (
     <Link
-      to={`/Repos/pages/${pageNumber}`}
-      classname='btn'
+      // to={`/Repos/pages/${pageNumber}`}
+      classname="btn"
       onClick={() => setIsSelected((prevState) => !prevState)}
     >
       {pageNumber}
@@ -24,7 +24,7 @@ export default function Pagination() {
     <div>
       <PreviosButton isDisabled={params.page === "1" ? true : false} />
       <PagesList pages={pages} />
-      <div className='next'>Next</div>
+      <div className="next">Next</div>
     </div>
   );
 }
@@ -34,7 +34,7 @@ function PagesList(props) {
   const pagesElements = pagess.map((el) => (
     <PageButton pageNumber={el}></PageButton>
   ));
-  return <div classname='pagesList'>{pagesElements}</div>;
+  return <div classname="pagesList">{pagesElements}</div>;
 }
 
 function PreviosButton(props) {

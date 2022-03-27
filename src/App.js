@@ -2,7 +2,7 @@ import "./App.css";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { useMemo } from "react";
-// import Pagination from "./components/Paginations/Pagination";
+import Pagination from "./components/Paginations/Pagination";
 // import RepositoryCard from "./components/RepositoryCard/RepositoryCard";
 
 import Header from "./components/Header/Header.js";
@@ -18,6 +18,7 @@ export default function App() {
         <Header />
         <RepositoryList />
         <TopRepo />
+        <Pagination />
       </Provider>
     </BrowserRouter>
   );
