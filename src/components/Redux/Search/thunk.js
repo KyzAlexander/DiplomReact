@@ -3,7 +3,7 @@ import {
   getTopRepositoryesSuccess,
   getTopRepositoryesError,
 } from "./actionCreators";
-import fetchMostRatedRepositories from "../../../services/repositories";
+import { fetchMostRatedRepositories } from "../../../services/repositories";
 
 export function getTopRepositories() {
   return async (dispatch, getState) => {

@@ -1,6 +1,6 @@
 const initialState = { isLoading: false, error: null, items: [] };
 
-const reducer = (state = initialState, action) => {
+const topRepositoriesReducer = (state = initialState, action) => {
   // eslint-disable-next-line default-case
   switch (action.type) {
     case "GET_TOP_REPOSITORYES_REQUEST": {
@@ -16,4 +16,4 @@ const reducer = (state = initialState, action) => {
   return state;
 };
 
-export default reducer;
+export default topRepositoriesReducer;

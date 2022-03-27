@@ -2,8 +2,8 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getTopRepositories } from "./thunk";
 
-function TopRepo(props) {
-  const repos = useSelector((store) => store.topRepositorys.items);
+export default function TopRepo(props) {
+  const repos = useSelector((store) => store.topRepositories.items);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getTopRepositories());
@@ -17,5 +17,3 @@ function TopRepo(props) {
     </div>
   );
 }
-
-export default TopRepo;

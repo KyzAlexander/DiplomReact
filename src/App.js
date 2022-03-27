@@ -1,14 +1,26 @@
 import "./App.css";
-// import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import { useMemo } from "react";
 // import Pagination from "./components/Paginations/Pagination";
-// import { useMemo } from "react";
 // import RepositoryCard from "./components/RepositoryCard/RepositoryCard";
-// import Header from "./components/header/header";
-// import RepositoryList from "./components/RepositoryList/RepositoryList";
 
-function App() {
-  // тот который был до добавления Pagination
-  return <div className='App'></div>;
+import Header from "./components/Header/Header.js";
+import RepositoryList from "./components/RepositoryList/RepositoryList.js";
+import createStore from "./components/Redux/Search/store";
+import TopRepo from "./components/Redux/Search/TopRepo";
+
+export default function App() {
+  // const store = useMemo(() => createStore(), []);
+  return (
+    <BrowserRouter>
+      <Provider store={createStore()}>
+        <Header />
+        <RepositoryList />
+        <TopRepo />
+      </Provider>
+    </BrowserRouter>
+  );
 }
 
 // function App() {
@@ -40,5 +52,3 @@ function App() {
 //     // </Provider>
 //   );
 // }
-
-export default App;
