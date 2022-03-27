@@ -12,7 +12,9 @@ export default function TopRepo(props) {
   return (
     <div>
       {repos.map((item) => (
-        <div>{item.date}</div>
+        <div>
+          {item.name} {item.id} {item.visibility}
+        </div>
       ))}
     </div>
   );

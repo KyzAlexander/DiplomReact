@@ -11,10 +11,10 @@ import createStore from "./components/Redux/Search/store";
 import TopRepo from "./components/Redux/Search/TopRepo";
 
 export default function App() {
-  // const store = useMemo(() => createStore(), []);
+  const store = useMemo(() => createStore(), []);
   return (
     <BrowserRouter>
-      <Provider store={createStore()}>
+      <Provider store={store}>
         <Header />
         <RepositoryList />
         <TopRepo />
