@@ -1,38 +1,31 @@
 .repositoryCard {
   display: flex;
   flex-direction: column;
-  max-width: 500px;
-  padding-bottom: 10px;
+  max-width: 600px;
+  padding: 10px;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: aqua;
 }
 .repositoryCard__title {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  max-width: 500px;
+  max-width: 600px;
 }
 .title__name {
   color: blue;
 }
-.title__access {
-  padding: 2px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: rgb(163, 161, 161);
-  border-radius: 10px;
-}
-.repositoryCard__subtitle {
+.star {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  max-width: 500px;
 }
-.subtitle__type {
-  border-bottom-style: solid;
-  border-color: rgb(209, 209, 6);
+.star__number {
+  margin-right: 10px;
 }
-.title__img {
+.star__img {
   width: 20px;
   height: 20px;
 }

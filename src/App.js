@@ -8,7 +8,7 @@ import Pagination from "./components/Paginations/Pagination";
 import Header from "./components/Header/Header.js";
 import RepositoryList from "./components/RepositoryList/RepositoryList.js";
 import createStore from "./components/Redux/Search/store";
-import TopRepo from "./components/Redux/Search/TopRepo";
+import TopRepo from "./components/Redux/Search/Top10Repositoryes";
 
 export default function App() {
   const store = useMemo(() => createStore(), []);
@@ -16,7 +16,7 @@ export default function App() {
     <BrowserRouter>
       <Provider store={store}>
         <Header />
-        <RepositoryList />
+        {/* <RepositoryList /> */}
         <TopRepo />
         <Pagination />
       </Provider>

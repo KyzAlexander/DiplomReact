@@ -21,9 +21,12 @@ function Header(props) {
             className="wrapperLogoAndTitle__logo"
             href="http://localhost:3000/#"
           >
-            <img src={logo} alt="site logo"></img>
+            <img
+              className="wrapperLogoAndTitle__img"
+              src={logo}
+              alt="site logo"
+            ></img>
           </a>
-          {/* <h1 className='wrapperLogoAndTitle__title'>Git Fake Alex</h1> */}
         </div>
         <div className="header__wrapperInput">
           <input
@@ -32,6 +35,7 @@ function Header(props) {
             // onChange={handleSearchChangeDebounser}
           ></input>
         </div>
+        {/* <h1 className="header__title">Git Fake Alex</h1> */}
       </nav>
     </header>
   );
