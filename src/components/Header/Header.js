@@ -5,6 +5,7 @@ import logo from "../../assets/images/logo.png";
 
 function Header(props) {
   //!!!! с этим не работает
+  //-----------------
   // const { onSearch } = props;
   // const handleSearchChange = useCallback(
   //   (event) => {
