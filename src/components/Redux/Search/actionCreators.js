@@ -1,25 +1,8 @@
-import {
-  GET_TOP_REPOSITORYES_REQUEST,
-  GET_TOP_REPOSITORYES_SUCCESS,
-  GET_TOP_REPOSITORYES_ERROR,
-} from "./actions";
+import { SET_SEARCH_QUERY } from "./action";
 
-export const getTopRepositoryesRequest = () => {
+export function setSearchQuery(query) {
   return {
-    type: GET_TOP_REPOSITORYES_REQUEST,
+    type: SET_SEARCH_QUERY,
+    payload: query,
   };
-};
-
-export const getTopRepositoryesSuccess = (payload) => {
-  return {
-    type: GET_TOP_REPOSITORYES_SUCCESS,
-    payload: payload,
-  };
-};
-
-export const getTopRepositoryesError = (error) => {
-  return {
-    type: GET_TOP_REPOSITORYES_ERROR,
-    error: error,
-  };
-};
+}
