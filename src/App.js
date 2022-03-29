@@ -9,6 +9,8 @@ import Header from "./components/Header/Header.js";
 import RepositoryList from "./components/RepositoryList/RepositoryList.js";
 import createStore from "./components/Redux/store";
 import TopRepo from "./components/Redux/topRepositories/Top10Repositoryes";
+import TopRepositories from "./components/pages/TopRepositories";
+import SearchedRepositories from "./components/pages/SearchedRepositories";
 
 export default function App() {
   const store = useMemo(() => createStore(), []);
@@ -16,8 +18,10 @@ export default function App() {
     <BrowserRouter>
       <Provider store={store}>
         <Header />
+        {/* <TopRepositories /> */}
+        <SearchedRepositories />
         {/* <RepositoryList /> */}
-        <TopRepo />
+        {/* <TopRepo /> */}
         <Pagination />
       </Provider>
     </BrowserRouter>

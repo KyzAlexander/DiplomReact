@@ -17,7 +17,8 @@ const searchedRepositoriesReducer = (state = initialState, action) => {
       return { ...state, isLoading: true };
     }
     case GET_SEARCHED_REPOSITORIES_SUCCESS: {
-      return { ...state, items: action.payload.items, isLoading: false };
+      const repos = action.payload.items;
+      return { ...state, items: repos, isLoading: false };
     }
     case GET_SEARCHED_REPOSITORIES_ERROR: {
       return { ...state, error: action.error, isLoading: false };
