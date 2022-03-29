@@ -7,7 +7,7 @@ import Pagination from "./components/Paginations/Pagination";
 
 import Header from "./components/Header/Header.js";
 import RepositoryList from "./components/RepositoryList/RepositoryList.js";
-import createStore from "./components/Redux/Search/store";
+import createStore from "./components/Redux/store";
 import TopRepo from "./components/Redux/Search/Top10Repositoryes";
 
 export default function App() {

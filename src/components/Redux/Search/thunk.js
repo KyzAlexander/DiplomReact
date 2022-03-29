@@ -10,7 +10,7 @@ export function getTopRepositories() {
     dispatch(getTopRepositoryesRequest());
 
     try {
-      const repositories = await fetchMostRatedRepositories(); // fetchMostRatedRepositories -берется из servises
+      const repositories = await fetchMostRatedRepositories();
 
       dispatch(getTopRepositoryesSuccess(repositories));
     } catch (error) {

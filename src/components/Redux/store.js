@@ -5,11 +5,13 @@ import {
   applyMiddleware,
 } from "redux";
 import thunk from "redux-thunk";
-import topRepositoriesReducer from "./topRepositoriesReducer";
+import topRepositoriesReducer from "./Search/topRepositoriesReducer";
+import searchedRepositoriesReducer from "./searchedRepositories/searchedRepositoriesReducer";
 
 function rootReducer() {
   return combineReducers({
     topRepositories: topRepositoriesReducer,
+    searchedRepositories: searchedRepositoriesReducer,
   });
 }
 
