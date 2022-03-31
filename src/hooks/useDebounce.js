@@ -12,4 +12,5 @@ const useDebounce = (value, time) => {
   }, [value, time]);
   return debouncedValue;
 };
-export default React.memo(useDebounce);
+
+export default useDebounce;
