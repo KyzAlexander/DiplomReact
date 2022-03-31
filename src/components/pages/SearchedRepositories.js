@@ -27,7 +27,7 @@ function SearchedRepositories() {
         }`}
       >
         <h1 className="searchedRepos__title">
-          Your search found "{searchQuery}" the following:
+          Your search "{searchQuery}" found the following:
         </h1>
         <RepositoryList repositories={searchedRepos} />
       </div>

@@ -11,18 +11,20 @@ import createStore from "./components/Redux/store";
 import TopRepo from "./components/Redux/topRepositories/Top10Repositoryes";
 import TopRepositories from "./components/pages/TopRepositories";
 import SearchedRepositories from "./components/pages/SearchedRepositories";
+import Home from "./components/pages/Home";
 
 export default function App() {
   const store = useMemo(() => createStore(), []);
   return (
     <BrowserRouter>
       <Provider store={store}>
-        <Header />
+        <Home />
+        {/* <Header /> */}
         {/* <TopRepositories /> */}
-        <SearchedRepositories />
+        {/* <SearchedRepositories /> */}
         {/* <RepositoryList /> */}
         {/* <TopRepo /> */}
-        <Pagination />
+        {/* <Pagination /> */}
       </Provider>
     </BrowserRouter>
   );

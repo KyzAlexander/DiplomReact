@@ -6,13 +6,13 @@ import logo from "../../assets/images/logo.png";
 function Header(props) {
   //!!!! с этим не работает
   //-----------------
-  // const { onSearch } = props;
-  // const handleSearchChange = useCallback(
-  //   (event) => {
-  //     onSearch?.(event.target.value);
-  //   },
-  //   [onSearch]
-  // );
+  const { onSearch } = props;
+  const handleSearchChange = useCallback(
+    (event) => {
+      onSearch?.(event.target.value);
+    },
+    [onSearch]
+  );
   // const handleSearchChangeDebounser = useDebounce(handleSearchChange, 500);
   return (
     <header>
@@ -33,7 +33,7 @@ function Header(props) {
           <input
             className="wrapperInput__textField"
             type="search"
-            // onChange={handleSearchChangeDebounser}
+            onChange={handleSearchChange}
           ></input>
         </div>
         {/* <h1 className="header__title">Git Fake Alex</h1> */}

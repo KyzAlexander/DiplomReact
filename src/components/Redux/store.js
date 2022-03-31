@@ -17,7 +17,6 @@ function rootReducer() {
   });
 }
 
-// для чего это ??
 const composeEnhancers = composeWithDevTools({
   name: "Github",
 });
