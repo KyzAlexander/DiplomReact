@@ -1,9 +1,9 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import DetailedCard from "../../DetailedCard/DetailedCard";
 import Header from "../../Header/Header";
 import { selectRepositoriesByOwnerAndName } from "../../Redux/selector";
-import RepositoryCard from "../../RepositoryCard/RepositoryCard";
 
 function DetailedRepository() {
   const { repositoryName, ownerName } = useParams();
@@ -14,9 +14,7 @@ function DetailedRepository() {
     <>
       <Header />
       <main className="detailedRepository">
-        {/* здесь надо другую карточку с подробными деталями  */}
-
-        {repository && <RepositoryCard repository={repository} />}
+        {repository && <DetailedCard repository={repository} />}
       </main>
     </>
   );
