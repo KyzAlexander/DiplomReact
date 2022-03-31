@@ -1,13 +1,13 @@
 import React, { useCallback, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Header from "../Header/Header";
-import { setSearchQuery } from "../Redux/search/actionCreators";
-import { getTopRepositories } from "../Redux/topRepositories/thunk";
+import Header from "../../Header/Header";
+import { setSearchQuery } from "../../Redux/search/actionCreators";
+import { getTopRepositories } from "../../Redux/topRepositories/thunk";
 import SearchedRepositories from "./SearchedRepositories";
 import TopRepositories from "./TopRepositories";
 
 function Home() {
-  const dispatch = useDispatch;
+  const dispatch = useDispatch();
   const searchQuery = useSelector((state) => state?.search);
   const isSearchQueryEmpty = searchQuery === "" || searchQuery === null;
 

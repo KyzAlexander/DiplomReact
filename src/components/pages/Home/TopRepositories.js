@@ -3,8 +3,8 @@ import { useSelector } from "react-redux";
 import {
   selectTopRepositories,
   selectTopRepositoriessLoading,
-} from "../Redux/topRepositories/selectors";
-import RepositoryList from "../RepositoryList/RepositoryList";
+} from "../../Redux/topRepositories/selectors";
+import RepositoryList from "../../RepositoryList/RepositoryList";
 
 function TopRepositories() {
   const searchQuery = useSelector((state) => state?.search);

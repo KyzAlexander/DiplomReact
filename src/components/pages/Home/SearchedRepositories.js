@@ -3,9 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   selectSearchedRepositories,
   selectSearchedRepositoriesLoading,
-} from "../Redux/searchedRepositories/selectors";
-import getRepositoriesBySearchQuery from "../Redux/searchedRepositories/thunks";
-import RepositoryList from "../RepositoryList/RepositoryList";
+} from "../../Redux/searchedRepositories/selectors";
+import getRepositoriesBySearchQuery from "../../Redux/searchedRepositories/thunks";
+import RepositoryList from "../../RepositoryList/RepositoryList";
 
 function SearchedRepositories() {
   const searchQuery = useSelector((state) => state?.search);
