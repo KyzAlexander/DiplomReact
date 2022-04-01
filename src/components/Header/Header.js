@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
 import "./header.css";
 import logo from "../../assets/images/logo.png";
-// import useDebounce from "../../hooks/useDebounce";
+import useDebounce from "../../hooks/useDebounce";
 
 function Header(props) {
   //!!!! с этим не работает
