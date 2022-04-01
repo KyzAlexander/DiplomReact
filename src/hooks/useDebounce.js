@@ -1,17 +1,15 @@
-import { useEffect, useState } from "react";
+import { useMemo } from "react";
 
-// видимо не работает, ПЕРЕДЕЛАТЬ!
-const useDebounce = (value, time) => {
-  const [debouncedValue, setDebouncedValue] = useState(value);
-  useEffect(() => {
-    const handler = setTimeout(() => {
-      setDebouncedValue(value);
-    }, time);
-    return () => {
-      clearTimeout(handler);
-    };
-  }, [value, time]);
-  return debouncedValue;
-};
+function debounce(func, timeout = 500) {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      func.apply(this, args);
+    }, timeout);
+  };
+}
 
-export default useDebounce;
+export default function useDebounce(func, timeout = 500) {
+  return useMemo(() => debounce(func, timeout), [func, timeout]);
+}

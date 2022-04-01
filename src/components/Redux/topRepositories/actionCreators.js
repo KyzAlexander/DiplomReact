@@ -4,9 +4,10 @@ import {
   GET_TOP_REPOSITORYES_ERROR,
 } from "./actions";
 
-export const getTopRepositoryesRequest = () => {
+export const getTopRepositoryesRequest = (limit) => {
   return {
     type: GET_TOP_REPOSITORYES_REQUEST,
+    payload: limit,
   };
 };
 

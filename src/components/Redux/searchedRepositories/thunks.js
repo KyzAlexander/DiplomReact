@@ -5,15 +5,17 @@ import {
   getSearchedRepositoriesSuccess,
 } from "./actionCreators";
 
-export default function getRepositoriesBySearchQuery(searchQuery) {
+const pageLimit = 10;
+export default function getRepositoriesBySearchQuery(searchQuery, page = 1) {
   return async (dispatch, getState) => {
     if (!searchQuery) {
       return;
     }
-    dispatch(getSearchedRepositoriesRequest);
+    dispatch(getSearchedRepositoriesRequest(page, pageLimit));
     try {
       const repositories = await fetchRepositoriesBySearchQuery({
         searchQuery,
+        page,
       });
       dispatch(getSearchedRepositoriesSuccess(repositories));
     } catch (error) {

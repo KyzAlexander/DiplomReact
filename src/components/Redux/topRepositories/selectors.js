@@ -5,5 +5,6 @@ export const selectTopRepositories = createSelector(
   (repos) => repos
 );
 export const selectTopRepositoriessLoading = createSelector(
-  (state) => state?.topRepositories?.isLoading //возможно здесь еще нужно ,(loading) => loading но в редьюсере нет loading
+  (state) => state?.topRepositories?.isLoading,
+  (loading) => loading
 );

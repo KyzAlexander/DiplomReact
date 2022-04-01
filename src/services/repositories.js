@@ -12,8 +12,8 @@ export function fetchMostRatedRepositories(filters = {}) {
   const searchParams = new URLSearchParams({
     q: dateFilter,
     sort: sortBy,
-    order: order,
-    page: page,
+    order,
+    page,
     per_page: perPage,
   });
   const url = `${base}?${searchParams}`;
@@ -21,10 +21,16 @@ export function fetchMostRatedRepositories(filters = {}) {
   return fetch(url).then((res) => res.json());
 }
 
-export function fetchRepositoriesBySearchQuery(searchQuery = "") {
-  const date = "2018-09-30";
-  const sortBy = "stars";
-  const order = "desc";
+export function fetchRepositoriesBySearchQuery(filters = {}) {
+  const {
+    date = "2018-09-30",
+    sortBy = "stars",
+    order = "desc",
+    page = 1,
+    perPage = 10,
+    searchQuery = "",
+  } = filters;
+
   const dateFilter = `created:">${date}"`;
   const query = `${searchQuery} ${dateFilter}`;
 
@@ -32,7 +38,9 @@ export function fetchRepositoriesBySearchQuery(searchQuery = "") {
   const searchParams = new URLSearchParams({
     q: query,
     sort: sortBy,
-    order: order,
+    order,
+    page,
+    per_page: perPage,
   });
   const url = `${base}?${searchParams}`;
 

@@ -5,5 +5,16 @@ export const selectSearchedRepositories = createSelector(
   (repos) => repos
 );
 export const selectSearchedRepositoriesLoading = createSelector(
-  (state) => state?.searchedRepositories?.isLoading //возможно здесь еще нужно ,(loading) => loading но в редьюсере нет loading
+  (state) => state?.searchedRepositories?.isLoading,
+  (loading) => loading
+);
+export const selectSearchedRepositoriesPaginationInfo = createSelector(
+  (state) => {
+    return {
+      limit: state?.searchedRepositories?.limit,
+      total: state?.searchedRepositories?.total,
+      page: state?.searchedRepositories?.page,
+    };
+  },
+  (pagination) => pagination
 );

@@ -1,5 +1,6 @@
 import React, { useCallback, useMemo } from "react";
 import PageItem from "./PageItem";
+import "./pagination.css";
 
 function Pagination(props) {
   const {
@@ -32,8 +33,8 @@ function Pagination(props) {
   );
 
   const firstPages = useMemo(() => {
-    return [...Array(firstPagesAmount).keys()].map((value) => {
-      const page = value + 1;
+    return [...Array(firstPagesAmount).keys()].map((index) => {
+      const page = index + 1;
       return (
         <li className="pagination__page" key={page}>
           <PageItem
@@ -49,7 +50,7 @@ function Pagination(props) {
   const lastPages = useMemo(() => {
     const lastPage = pagesAmount;
     return [...Array(lastPagesAmount).keys()].map((index) => {
-      const page = lastPage - index;
+      const page = lastPage + index;
       return (
         <li className="pagination__page" key={page}>
           <PageItem

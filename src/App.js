@@ -34,7 +34,7 @@ export default function App() {
             />
           </Switch>
         </Suspense>
-        <Pagination />
+        {/* <Pagination /> */}
         {/* <DetailedRepository /> */}
         {/* <Home /> */}
         {/* <Header /> */}

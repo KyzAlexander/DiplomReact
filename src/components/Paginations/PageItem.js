@@ -11,7 +11,9 @@ function PageItem(props) {
     [onPageClick, page]
   );
 
-  const className = `pagination-page ${selected} ? 'pagination-page--selected' : ''`;
+  const className = `pagination-page ${
+    selected ? "pagination-page--selected" : ""
+  }`;
 
   return (
     <a href="/" onClick={handleClick} className={className}>

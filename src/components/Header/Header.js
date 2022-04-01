@@ -4,8 +4,6 @@ import logo from "../../assets/images/logo.png";
 import useDebounce from "../../hooks/useDebounce";
 
 function Header(props) {
-  //!!!! с этим не работает
-  //-----------------
   const { onSearch } = props;
   const handleSearchChange = useCallback(
     (event) => {
@@ -13,7 +11,7 @@ function Header(props) {
     },
     [onSearch]
   );
-  // const handleSearchChangeDebounser = useDebounce(handleSearchChange, 500);
+  const handleSearchChangeDebounser = useDebounce(handleSearchChange, 500);
   return (
     <header>
       <nav className="header">
@@ -33,7 +31,7 @@ function Header(props) {
           <input
             className="wrapperInput__textField"
             type="search"
-            onChange={handleSearchChange}
+            onChange={handleSearchChangeDebounser}
           ></input>
         </div>
         {/* <h1 className="header__title">Git Fake Alex</h1> */}
