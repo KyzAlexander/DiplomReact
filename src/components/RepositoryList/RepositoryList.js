@@ -1,4 +1,5 @@
 import RepositoryCard from "../RepositoryCard/RepositoryCard.js";
+import DetailedCard from "../DetailedCard/DetailedCard";
 
 function RepositoryList(props) {
   const { repositories = [] } = props;
@@ -6,7 +7,8 @@ function RepositoryList(props) {
     <ul className="repositoriesList">
       {repositories.map((card) => (
         <li>
-          <RepositoryCard repository={card} />
+          {/* <RepositoryCard repository={card} /> */}
+          <DetailedCard repository={card} />
         </li>
       ))}
     </ul>

@@ -21,3 +21,4 @@ function DetailedRepository() {
 }
 
 export default React.memo(DetailedRepository);
+

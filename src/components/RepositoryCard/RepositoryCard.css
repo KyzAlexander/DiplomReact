@@ -6,6 +6,7 @@
   border-style: solid;
   border-radius: 10px;
   border-color: aqua;
+  margin-top: 10px;
 }
 .repositoryCard__title {
   display: flex;

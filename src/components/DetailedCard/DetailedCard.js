@@ -16,9 +16,10 @@ export default function DetailedCard(props) {
       <div className="detailedCard__avatar">
         <img
           className="avatar__avatar"
-          src={repository.avatar_url}
+          href={repository.avatar_url}
           alt="avatar"
         ></img>
+        {/* <a href={repository.avatar_url}> lo</a> */}
       </div>
 
       <div className="detailedCard__nickName">
@@ -28,11 +29,17 @@ export default function DetailedCard(props) {
       </div>
 
       <div className="detailedCard__language">
-        <p>{repository.language}</p>
+        <p>
+          <span>Languages used: </span>
+          {repository.language}
+        </p>
       </div>
 
       <div className="detailedCard__description">
-        <p>{repository.description}</p>
+        <p>
+          <span>Short description: </span>
+          {repository.description}
+        </p>
       </div>
 
       <div className="detailedCard__contributors">

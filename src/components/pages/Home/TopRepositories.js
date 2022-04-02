@@ -23,7 +23,7 @@ function TopRepositories() {
         }`}
       >
         <h1 className="homeTopRepos__title">
-          Top repositories: {topRepos.length}
+          Top {topRepos.length} repositories
         </h1>
         <RepositoryList repositories={topRepos} />
       </div>
