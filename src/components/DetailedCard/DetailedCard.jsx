@@ -1,6 +1,8 @@
 import star from "../../assets/images/star.png";
+import PropTypes from "prop-types";
+import React from "react";
 
-export default function DetailedCard(props) {
+function DetailedCard(props) {
   const { repository } = props;
   return (
     <section className="detailedCard">
@@ -48,3 +50,18 @@ export default function DetailedCard(props) {
     </section>
   );
 }
+
+DetailedCard.propTypes = {
+  repository: PropTypes.shape ({
+    name: PropTypes.string.isRequired,
+    stargazers_count: PropTypes.number.isRequired,
+    avatar_url: PropTypes.string.isRequired,
+    html_url: PropTypes.string.isRequired,
+    login: PropTypes.string.isRequired,
+    language: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    contributors: PropTypes.string.isRequired,
+  }),
+};
+
+export default React.memo(DetailedCard);

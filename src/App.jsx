@@ -5,8 +5,8 @@ import { lazy, Suspense, useMemo } from "react";
 import Pagination from "./components/Paginations/Pagination";
 import RepositoryCard from "./components/RepositoryCard/RepositoryCard";
 
-import Header from "./components/Header/Header.js";
-import RepositoryList from "./components/RepositoryList/RepositoryList.js";
+import Header from "./components/Header/Header";
+import RepositoryList from "./components/RepositoryList/RepositoryList";
 import createStore from "./components/Redux/store";
 import TopRepo from "./components/Redux/topRepositories/Top10Repositoryes";
 import TopRepositories from "./components/pages/Home/TopRepositories";

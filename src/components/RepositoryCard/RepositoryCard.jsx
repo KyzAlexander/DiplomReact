@@ -2,6 +2,7 @@ import React, { useCallback } from "react";
 import "./RepositoryCard.css";
 import star from "../../assets/images/star.png";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 function RepositoryCard(props) {
   const { repository } = props;
@@ -35,5 +36,15 @@ function RepositoryCard(props) {
     </li>
   );
 }
+
+RepositoryCard.propTypes = {
+  repository: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    stargazers_count: PropTypes.number.isRequired,
+    updated_at: PropTypes.string.isRequired,
+    html_url: PropTypes.string.isRequired,
+    login: PropTypes.string.isRequired,
+  }),
+};
 
 export default React.memo(RepositoryCard);

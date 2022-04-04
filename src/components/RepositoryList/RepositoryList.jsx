@@ -1,4 +1,4 @@
-import RepositoryCard from "../RepositoryCard/RepositoryCard.js";
+import RepositoryCard from "../RepositoryCard/RepositoryCard";
 import DetailedCard from "../DetailedCard/DetailedCard";
 
 function RepositoryList(props) {
@@ -7,8 +7,8 @@ function RepositoryList(props) {
     <ul className="repositoriesList">
       {repositories.map((card) => (
         <li>
-          {/* <RepositoryCard repository={card} /> */}
-          <DetailedCard repository={card} />
+          <RepositoryCard repository={card} />
+          {/* <DetailedCard repository={card} /> */}
         </li>
       ))}
     </ul>
