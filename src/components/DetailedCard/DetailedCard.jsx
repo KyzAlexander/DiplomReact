@@ -1,34 +1,40 @@
 import star from "../../assets/images/star.png";
 import PropTypes from "prop-types";
 import React from "react";
+import './detailedCard.css'
 
 function DetailedCard(props) {
   const { repository } = props;
   return (
     <section className="detailedCard">
-      <div className="detailedCard__title">
-        <h2 className="title__name">{repository.name}</h2>
-      </div>
 
-      <div className="detailedCard__star">
-        <p className="star__number">{repository.stargazers_count}</p>
-        <img className="star__img" src={star} alt="number of stars"></img>
-      </div>
+        <div className="wrapper-Avatar-nickName">
+          <div className="detailedCard__avatar">
+            <img
+              className="avatar__avatar"
+              src={repository.owner.avatar_url}
+              alt="avatar"
+            ></img>        
+          </div>
+          <div className="detailedCard__nickName">
+            <h1>
+              <a className="nickName__link" href={repository.html_url} target='_blank'>
+              {repository.owner.login}
+            </a>
+            </h1>
+          </div>          
+        </div>
 
-      <div className="detailedCard__avatar">
-        <img
-          className="avatar__avatar"
-          href={repository.avatar_url}
-          alt="avatar"
-        ></img>
-        {/* <a href={repository.avatar_url}> lo</a> */}
-      </div>
+        <div className="wrapper-title-star">
+          <div className="detailedCard__title">
+              <h2 className="title__name">{repository.name}</h2>
+            </div>
 
-      <div className="detailedCard__nickName">
-        <a className="nickName__link" href={repository.html_url}>
-          {repository.login}
-        </a>
-      </div>
+          <div className="detailedCard__star">
+            <p className="star__number">{repository.stargazers_count}</p>
+            <img className="star__img" src={star} alt="number of stars"></img>
+          </div>
+        </div>
 
       <div className="detailedCard__language">
         <p>
@@ -45,7 +51,7 @@ function DetailedCard(props) {
       </div>
 
       <div className="detailedCard__contributors">
-        {repository.contributors}
+        {repository.owner.contributors}
       </div>
     </section>
   );

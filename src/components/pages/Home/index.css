@@ -1,3 +1,9 @@
 .invisible {
   display: none;
 }
+.homeTopRepos__title {
+  margin-left: 40px;
+}
+.searchedRepos__title {
+  margin-left: 40px;
+}

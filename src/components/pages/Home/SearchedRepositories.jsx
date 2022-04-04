@@ -45,9 +45,9 @@ function SearchedRepositories() {
           isSearchedReposVisible ? "visible" : "invisible"
         }`}
       >
-        <h1 className="searchedRepos__title">
+        <h2 className="searchedRepos__title">
           Your search "{searchQuery}" found the following:
-        </h1>
+        </h2>
         <RepositoryList repositories={searchedRepos} />
         <Pagination
           total={total}

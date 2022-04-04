@@ -1,0 +1,43 @@
+
+.detailedCard {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  width: 100%;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: aqua;
+}
+.wrapper-Avatar-nickName{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;  
+}
+.avatar__avatar{
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+}
+.detailedCard__nickName{
+  margin-left: 15px;
+}
+
+.wrapper-title-star{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.detailedCard__star {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.detailedCard__language span {
+  font-weight: bold;
+}
+
+.detailedCard__description span{
+  font-weight: bold;
+}

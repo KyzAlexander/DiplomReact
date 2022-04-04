@@ -1,5 +1,5 @@
 import React, { useCallback } from "react";
-import "./RepositoryCard.css";
+import "./repositoryCard.css";
 import star from "../../assets/images/star.png";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
@@ -13,7 +13,7 @@ function RepositoryCard(props) {
       pathname: `/repository/${repository.owner.login}/${repository.name}`,
     }),
     [repository.owner.login, repository.name]
-  );
+  );  
   return (
     <li>
       <section className="repositoryCard">

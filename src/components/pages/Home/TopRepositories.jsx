@@ -22,9 +22,9 @@ function TopRepositories() {
           isTopReposVisible ? "visible" : "invisible"
         }`}
       >
-        <h1 className="homeTopRepos__title">
+        <h2 className="homeTopRepos__title">
           Top {topRepos.length} repositories
-        </h1>
+        </h2>
         <RepositoryList repositories={topRepos} />
       </div>
     </div>

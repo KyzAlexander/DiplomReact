@@ -14,7 +14,7 @@ function DetailedRepository() {
     <>
       <Header />
       <main className="detailedRepository">
-        {repository && <DetailedCard repository={repository} />}
+        {repository && <DetailedCard repository={repository} />}        
       </main>
     </>
   );
