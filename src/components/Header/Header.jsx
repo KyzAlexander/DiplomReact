@@ -5,7 +5,7 @@ import useDebounce from "../../hooks/useDebounce";
 import PropTypes  from "prop-types";
 
 function Header(props) {
-  const { onSearch } = props;
+  const { onSearch, search } = props;
   const handleSearchChange = useCallback(
     (event) => {
       onSearch?.(event.target.value);
@@ -32,6 +32,7 @@ function Header(props) {
           <input
             className="wrapperInput__textField"
             type="search"
+            defaultValue={search}
             onChange={handleSearchChangeDebounser}
           ></input>
         </div>
@@ -42,7 +43,8 @@ function Header(props) {
 }
 
 Header.propTypes ={
-  onSearch: PropTypes.func.isRequired
+  onSearch: PropTypes.func.isRequired,
+  search: PropTypes.string.isRequired
 }
 
 export default React.memo(Header);

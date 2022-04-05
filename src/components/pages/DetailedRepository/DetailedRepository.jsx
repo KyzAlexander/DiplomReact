@@ -8,7 +8,7 @@ import { selectRepositoriesByOwnerAndName } from "../../Redux/selector";
 function DetailedRepository() {
   const { repositoryName, ownerName } = useParams();
   const repository = useSelector((state) =>
-    selectRepositoriesByOwnerAndName(state, repositoryName, ownerName)
+    selectRepositoriesByOwnerAndName(state, ownerName, repositoryName )
   );
   return (
     <>

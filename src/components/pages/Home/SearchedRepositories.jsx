@@ -10,6 +10,7 @@ import getRepositoriesBySearchQuery from "../../Redux/searchedRepositories/thunk
 import RepositoryList from "../../RepositoryList/RepositoryList";
 import Pagination from "../../Paginations/Pagination";
 import "./index.css";
+import { useHistory, useLocation } from "react-router-dom";
 
 function SearchedRepositories() {
   const searchQuery = useSelector((state) => state?.search);
@@ -22,7 +23,17 @@ function SearchedRepositories() {
   );
 
   const dispatch = useDispatch();
+  const history = useHistory()
+  const location = useLocation()
 
+  useEffect(()=>{
+    const oldSearch = location.search
+    const newSearchParams = new URLSearchParams(oldSearch)
+    newSearchParams.set('search', searchQuery)
+    newSearchParams.set('page', page)
+    history.push(`${location.pathname}?${newSearchParams.toString()}`)
+  },[history, location.pathname, location.search, page, searchQuery])
+  
   useEffect(() => {
     dispatch(getRepositoriesBySearchQuery(searchQuery, page));
   }, [dispatch, searchQuery, page]);
@@ -33,6 +44,13 @@ function SearchedRepositories() {
     },
     [dispatch]
   );
+
+  useEffect(()=>{
+    const oldSearch = location.search
+    const searchParams = new URLSearchParams(oldSearch)    
+    searchParams.set('page', page)
+    history.push(`${location.pathname}?${searchParams.toString()}`)
+  },[history, location.pathname, location.search, page])
 
   const isSearchedReposVisible =
     !isSearchQueryEmpty && searchedRepos && !isSearchReposLoading;
