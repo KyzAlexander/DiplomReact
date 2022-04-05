@@ -1,8 +1,9 @@
 .repositoryCard {
   display: flex;
-  flex-direction: column;
-  max-width: 600px;
-  padding: 10px;
+  flex-direction: column;  
+  max-width: 500px;
+  width: 100%;
+  /* padding: 10px; */
   border-style: solid;
   border-radius: 10px;
   border-color: aqua;

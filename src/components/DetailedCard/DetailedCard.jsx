@@ -51,7 +51,8 @@ function DetailedCard(props) {
       </div>
 
       <div className="detailedCard__contributors">
-        {repository?.contributors_url}
+        {repository?.contributors}
+      
       </div>
     </section>
   );

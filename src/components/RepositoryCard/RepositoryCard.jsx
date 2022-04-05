@@ -14,8 +14,7 @@ function RepositoryCard(props) {
     }),
     [repository.owner.login, repository.name]
   );  
-  return (
-    <li>
+  return (    
       <section className="repositoryCard">
         <div className="repositoryCard__title">
           <Link to={datailsLink}>
@@ -32,8 +31,7 @@ function RepositoryCard(props) {
         <a className="repositoryCard__link" href={repository.html_url}>
           Link on Github
         </a>
-      </section>
-    </li>
+      </section>    
   );
 }
 
