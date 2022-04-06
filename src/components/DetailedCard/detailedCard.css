@@ -2,11 +2,16 @@
 .detailedCard {
   display: flex;
   flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;  
   max-width: 800px;
   width: 100%;
   border-style: solid;
   border-radius: 10px;
   border-color: aqua;
+  box-shadow: 10px 5px 5px gray;
+  background-color: rgb(231, 231, 231)
 }
 .wrapper-Avatar-nickName{
   display: flex;

@@ -1,13 +1,14 @@
 .repositoryCard {
   display: flex;
   flex-direction: column;  
-  max-width: 500px;
-  width: 100%;
-  /* padding: 10px; */
+  max-width: 400px;
+  width: 100%;  
   border-style: solid;
   border-radius: 10px;
   border-color: aqua;
-  margin-top: 10px;
+  box-shadow: 10px 5px 5px gray;
+  margin-top: 10px;  
+  background-color: rgb(231, 231, 231)
 }
 .repositoryCard__title {
   display: flex;

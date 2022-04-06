@@ -16,13 +16,13 @@ function Header(props) {
   return (
     <header>
       <nav className="header">
-        <div className="header__wrapperLogoAndTitle">
+        <div className="header__wrapperLogo">
           <a
-            className="wrapperLogoAndTitle__logo"
+            className="link"
             href="http://localhost:3000/#"
           >
             <img
-              className="wrapperLogoAndTitle__img"
+              className="logo"
               src={logo}
               alt="site logo"
             ></img>
@@ -30,7 +30,7 @@ function Header(props) {
         </div>
         <div className="header__wrapperInput">
           <input
-            className="wrapperInput__textField"
+            className="wrapperInput__input"
             type="search"
             defaultValue={search}
             onChange={handleSearchChangeDebounser}

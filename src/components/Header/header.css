@@ -1,26 +1,25 @@
+header {
+  background-color: rgb(58, 76, 179);  
+}
 .header {
   display: flex;
   flex-direction: row;
   align-items: center; 
   width: 100%; 
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 50px;
-  background-color: rgb(58, 76, 179);
 }
 
-.header__wrapperLogoAndTitle {
+.header__wrapperLogo {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.wrapperLogoAndTitle__img {
+.logo {
   width: 40px;
   height: 40px;
   margin-right: 10px;
 }
-.wrapperInput__textField {
+.wrapperInput__input {
   border: 1px, groove;
   border-radius: 5px;
   margin-left: 10px;

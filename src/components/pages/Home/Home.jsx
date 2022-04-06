@@ -7,6 +7,7 @@ import { getSearchedRepositoriesPage } from "../../Redux/searchedRepositories/ac
 import { getTopRepositories } from "../../Redux/topRepositories/thunk";
 import SearchedRepositories from "./SearchedRepositories";
 import TopRepositories from "./TopRepositories";
+import "./index.css"
 
 function Home() {
   const history = useHistory()
