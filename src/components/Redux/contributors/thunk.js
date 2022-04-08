@@ -1,20 +1,22 @@
-import { getContributorsRequest, getContributorsError } from "./actionCreators";
+import {
+  getContributorsRequest,
+  getContributorsError,
+  getContributorsSuccess,
+} from "./actionCreators";
 // import { fetchMostRatedRepositories } from "../../../services/repositories";
 
-const perPageLimit = 10;
-export function getContributors() {
+export function getContributors(сontributors) {
+  const url = "https://api.github.com/repos/octocat/hello-world/contributors";
   return async (dispatch, getState) => {
-    dispatch(getContributorsRequest(perPageLimit));
+    dispatch(getContributorsRequest());
 
     try {
-      const repositories = await fetchMostRatedRepositories({
-        perPage: perPageLimit,
-      });
+      const сontributors = await fetch(url);
 
-      dispatch(getTopRepositoryesSuccess(repositories));
+      // dispatch(getContributorsSuccess(сontributors));
     } catch (error) {
       console.error(error);
-      dispatch(getContributorsError(error));
+      // dispatch(getContributorsError(error));
     }
   };
 }

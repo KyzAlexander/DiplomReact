@@ -1,21 +1,19 @@
-import {
-  GET_CONTRIBUTORS_REQUEST,
-  GET_CONTRIBUTORS_ERROR
-} from "./actions";
+import { GET_CONTRIBUTORS_SUCCESS } from "./action";
+import { GET_CONTRIBUTORS_REQUEST, GET_CONTRIBUTORS_ERROR } from "./action";
 
-export const getContributorsRequest = () => {
+export const getContributorsRequest = (isFetching) => {
   return {
     type: GET_CONTRIBUTORS_REQUEST,
-    payload: ,
+    payload: isFetching,
   };
 };
 
-// export const getTopRepositoryesSuccess = (payload) => {
-//   return {
-//     type: GET_TOP_REPOSITORYES_SUCCESS,
-//     payload: payload,
-//   };
-// };
+export const getContributorsSuccess = (isFetching) => {
+  return {
+    type: GET_CONTRIBUTORS_SUCCESS,
+    payload: isFetching,
+  };
+};
 
 export const getContributorsError = (error) => {
   return {
