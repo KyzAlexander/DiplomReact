@@ -7,27 +7,28 @@ import { getSearchedRepositoriesPage } from "../../Redux/searchedRepositories/ac
 import { getTopRepositories } from "../../Redux/topRepositories/thunk";
 import SearchedRepositories from "./SearchedRepositories";
 import TopRepositories from "./TopRepositories";
-import "./index.css"
+import "./index.css";
 
 function Home() {
-  const history = useHistory()
-  const location = useLocation()
+  const history = useHistory();
+  const location = useLocation();
   const dispatch = useDispatch();
   const searchQuery = useSelector((state) => state?.search);
   const isSearchQueryEmpty = searchQuery === "" || searchQuery === null;
 
-  useEffect(()=> {
-    const searchParams = new URLSearchParams(location.search)
-    const searchFromParams = searchParams.get('search')
-    const pageFromParams = searchParams.get('page')
-    const hasFilledSerchParams = Boolean(searchFromParams) && Boolean(pageFromParams)
+  useEffect(() => {
+    const searchParams = new URLSearchParams(location.search);
+    const searchFromParams = searchParams.get("search");
+    const pageFromParams = searchParams.get("page");
+    const hasFilledSerchParams =
+      Boolean(searchFromParams) && Boolean(pageFromParams);
 
-    if(hasFilledSerchParams) {
-      const pageFromSearch = parseInt(pageFromParams, 10) // parseInt() принимает строку в качестве аргумента и возвращает целое число в соответствии с указанным основанием системы счисления.
-    dispatch(getSearchedRepositoriesPage(pageFromSearch))
-    dispatch(setSearchQuery(searchFromParams))
+    if (hasFilledSerchParams) {
+      const pageFromSearch = parseInt(pageFromParams, 10); // parseInt() принимает строку в качестве аргумента и возвращает целое число в соответствии с указанным основанием системы счисления.
+      dispatch(getSearchedRepositoriesPage(pageFromSearch));
+      dispatch(setSearchQuery(searchFromParams));
     }
-  }, []) 
+  }, []);
 
   useEffect(() => {
     if (isSearchQueryEmpty) {

@@ -1,4 +1,3 @@
-/* eslint-disable default-case */
 import {
   GET_SEARCHED_REPOSITORIES_ERROR,
   GET_SEARCHED_REPOSITORIES_PAGE,

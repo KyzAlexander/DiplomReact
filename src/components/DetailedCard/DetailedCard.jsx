@@ -1,42 +1,45 @@
 import star from "../../assets/images/star.png";
 import PropTypes from "prop-types";
 import React, { useEffect, useState } from "react";
-import './detailedCard.css'
+import "./detailedCard.css";
 import Contributors from "../Contributors/Contributors";
 import { fetchContributors } from "../../services/fetchContributors";
 
 function DetailedCard(props) {
-  const { repository} = props;
- 
-  const [contributors, setContributors] = useState([])
-  useEffect(()=>{
-    fetchContributors(repository.contributors_url, setContributors)    
-  },[repository.contributors_url])  
-  
+  const { repository } = props;
+
+  const [contributors, setContributors] = useState([]);
+  useEffect(() => {
+    fetchContributors(repository.contributors_url, setContributors);
+  }, [repository.contributors_url]);
+
   return (
     <section className="detailedCard">
-
       <div className="wrapper-Avatar-nickName">
         <div className="detailedCard__avatar">
           <img
             className="avatar__avatar"
             src={repository.owner.avatar_url}
             alt="avatar"
-          ></img>        
+          ></img>
         </div>
         <div className="detailedCard__nickName">
           <h1>
-            <a className="nickName__link" href={repository.html_url} target='_blank'>
-            {repository.owner.login}
-          </a>
+            <a
+              className="nickName__link"
+              href={repository.html_url}
+              target="_blank"
+            >
+              {repository.owner.login}
+            </a>
           </h1>
-        </div>          
+        </div>
       </div>
 
       <div className="wrapper-title-star">
         <div className="detailedCard__title">
           <h2 className="title__name">{repository.name}</h2>
-          </div>
+        </div>
 
         <div className="detailedCard__star">
           <p className="star__number">{repository.stargazers_count}</p>
@@ -58,14 +61,17 @@ function DetailedCard(props) {
         </p>
       </div>
 
-      <Contributors contributors={contributors.length > 10?contributors.slice(0,10) : contributors}/> 
-          
+      <Contributors
+        contributors={
+          contributors.length > 10 ? contributors.slice(0, 10) : contributors
+        }
+      />
     </section>
   );
 }
 
 DetailedCard.propTypes = {
-  repository: PropTypes.shape ({
+  repository: PropTypes.shape({
     name: PropTypes.string.isRequired,
     stargazers_count: PropTypes.number.isRequired,
     avatar_url: PropTypes.string.isRequired,

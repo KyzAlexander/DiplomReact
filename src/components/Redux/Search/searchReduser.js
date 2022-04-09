@@ -1,4 +1,3 @@
-/* eslint-disable default-case */
 import { SET_SEARCH_QUERY } from "./action";
 
 const initialState = "";

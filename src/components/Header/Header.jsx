@@ -2,7 +2,7 @@ import React, { useCallback } from "react";
 import "./header.css";
 import logo from "../../assets/images/logo.png";
 import useDebounce from "../../hooks/useDebounce";
-import PropTypes  from "prop-types";
+import PropTypes from "prop-types";
 
 function Header(props) {
   const { onSearch, search } = props;
@@ -17,15 +17,8 @@ function Header(props) {
     <header>
       <nav className="header">
         <div className="header__wrapperLogo">
-          <a
-            className="link"
-            href="http://localhost:3000/#"
-          >
-            <img
-              className="logo"
-              src={logo}
-              alt="site logo"
-            ></img>
+          <a className="link" href="http://localhost:3000/#">
+            <img className="logo" src={logo} alt="site logo"></img>
           </a>
         </div>
         <div className="header__wrapperInput">
@@ -42,9 +35,9 @@ function Header(props) {
   );
 }
 
-Header.propTypes ={
+Header.propTypes = {
   onSearch: PropTypes.func.isRequired,
-  search: PropTypes.string.isRequired
-}
+  search: PropTypes.string.isRequired,
+};
 
 export default React.memo(Header);

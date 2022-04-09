@@ -13,25 +13,25 @@ function RepositoryCard(props) {
       pathname: `/repository/${repository.owner.login}/${repository.name}`,
     }),
     [repository.owner.login, repository.name]
-  );  
-  return (    
-      <section className="repositoryCard">
-        <div className="repositoryCard__title">
-          <Link to={datailsLink}>
-            <h2 className="title__name">{repository.name}</h2>
-          </Link>
-          <div className="star">
-            <p className="star__number">{repository.stargazers_count}</p>
-            <img className="star__img" src={star} alt="number of stars"></img>
-          </div>
+  );
+  return (
+    <section className="repositoryCard">
+      <div className="repositoryCard__title">
+        <Link to={datailsLink}>
+          <h2 className="title__name">{repository.name}</h2>
+        </Link>
+        <div className="star">
+          <p className="star__number">{repository.stargazers_count}</p>
+          <img className="star__img" src={star} alt="number of stars"></img>
         </div>
-        <p className="repositoryCard__data">
-          Data: {repository.updated_at.slice(0, 10)}
-        </p>
-        <a className="repositoryCard__link" href={repository.html_url}>
-          Link on Github
-        </a>
-      </section>    
+      </div>
+      <p className="repositoryCard__data">
+        Data: {repository.updated_at.slice(0, 10)}
+      </p>
+      <a className="repositoryCard__link" href={repository.html_url}>
+        Link on Github
+      </a>
+    </section>
   );
 }
 
