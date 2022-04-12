@@ -1,0 +1,35 @@
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;  
+  width: 500px;
+  max-width: 100%;
+}
+.pagination__nav-button {
+  font-weight: 600;
+  border-radius: 5px;
+  border-style: none;
+  padding: 7px;
+  background-color: aqua;
+  cursor: pointer;
+}
+.paginstion__pages-list {
+  padding: 0;
+}
+.pagination__page {
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;  
+}
+.pagination__page a {
+  text-decoration: none;
+}
+.pagination-page--selected{
+  border-radius: 5px;
+  padding: 5px;
+  background-color: aqua;
+}
