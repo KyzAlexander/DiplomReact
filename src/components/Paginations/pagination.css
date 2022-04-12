@@ -15,6 +15,7 @@
   border-style: none;
   padding: 7px;
   background-color: aqua;
+  cursor: pointer;
 }
 .paginstion__pages-list {
   padding: 0;

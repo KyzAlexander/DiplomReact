@@ -26,7 +26,7 @@ function RepositoryCard(props) {
         </div>
       </div>
       <p className="repositoryCard__data">
-        Data: {repository.updated_at.slice(0, 10)}
+        Date: {repository.updated_at.slice(0, 10)}
       </p>
       <a className="repositoryCard__link" href={repository.html_url}>
         Link on Github
@@ -41,7 +41,8 @@ RepositoryCard.propTypes = {
     stargazers_count: PropTypes.number.isRequired,
     updated_at: PropTypes.string.isRequired,
     html_url: PropTypes.string.isRequired,
-    login: PropTypes.string.isRequired,
+    owner: PropTypes.shape({
+      login: PropTypes.string.isRequired,})    
   }),
 };
 

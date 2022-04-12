@@ -17,7 +17,7 @@ function Header(props) {
     <header>
       <nav className="header">
         <div className="header__wrapperLogo">
-          <a className="link" href="http://localhost:3000/#">
+          <a className="link" href="/">
             <img className="logo" src={logo} alt="site logo"></img>
           </a>
         </div>

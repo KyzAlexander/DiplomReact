@@ -6,12 +6,15 @@ import Contributors from "../Contributors/Contributors";
 import { fetchContributors } from "../../services/fetchContributors";
 
 function DetailedCard(props) {
-  const { repository } = props;
+  const { repository } = props;  
 
   const [contributors, setContributors] = useState([]);
   useEffect(() => {
     fetchContributors(repository.contributors_url, setContributors);
   }, [repository.contributors_url]);
+
+  const noMoreTenContributors = contributors.length > 10 ? contributors.slice(0, 10) : contributors
+  
 
   return (
     <section className="detailedCard">
@@ -62,9 +65,7 @@ function DetailedCard(props) {
       </div>
 
       <Contributors
-        contributors={
-          contributors.length > 10 ? contributors.slice(0, 10) : contributors
-        }
+        contributors={noMoreTenContributors}
       />
     </section>
   );

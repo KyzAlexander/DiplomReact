@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useHistory, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Header from "../../Header/Header";
 import { setSearchQuery } from "../../Redux/search/actionCreators";
 import { getSearchedRepositoriesPage } from "../../Redux/searchedRepositories/actionCreators";
@@ -9,8 +9,7 @@ import SearchedRepositories from "./SearchedRepositories";
 import TopRepositories from "./TopRepositories";
 import "./index.css";
 
-function Home() {
-  const history = useHistory();
+function Home() {  
   const location = useLocation();
   const dispatch = useDispatch();
   const searchQuery = useSelector((state) => state?.search);
