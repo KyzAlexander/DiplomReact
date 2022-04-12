@@ -1,0 +1,19 @@
+.invisible {
+  display: none;
+}
+.homeTopRepos__title {
+  margin-left: auto;
+  margin-right: auto;
+  align-content: center;
+}
+.searchedRepos__title {
+  margin-left: 40px;
+}
+.home{
+  width: 100%;  
+}
+.visible{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

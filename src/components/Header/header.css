@@ -1,0 +1,30 @@
+header {
+  background-color: rgb(58, 76, 179);  
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  width: 100%; 
+}
+
+.header__wrapperLogo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+.wrapperInput__input {
+  border: 1px, groove;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+.header__title {
+margin-left: auto;
+margin-right: auto;
+}
