@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/DiplomReact/static/css/main.1ef3a49a.css",
+    "main.js": "/DiplomReact/static/js/main.1fe900d7.js",
+    "static/css/881.dd280079.chunk.css": "/DiplomReact/static/css/881.dd280079.chunk.css",
+    "static/js/881.fae817d5.chunk.js": "/DiplomReact/static/js/881.fae817d5.chunk.js",
+    "static/css/929.a2b75a6c.chunk.css": "/DiplomReact/static/css/929.a2b75a6c.chunk.css",
+    "static/js/929.dc69661d.chunk.js": "/DiplomReact/static/js/929.dc69661d.chunk.js",
+    "static/js/787.a663bc8e.chunk.js": "/DiplomReact/static/js/787.a663bc8e.chunk.js",
+    "static/media/logo.png": "/DiplomReact/static/media/logo.363cb5edea582a89c41f.png",
+    "static/media/star.png": "/DiplomReact/static/media/star.0bc4a36781992062c601.png",
+    "index.html": "/DiplomReact/index.html",
+    "main.1ef3a49a.css.map": "/DiplomReact/static/css/main.1ef3a49a.css.map",
+    "main.1fe900d7.js.map": "/DiplomReact/static/js/main.1fe900d7.js.map",
+    "881.dd280079.chunk.css.map": "/DiplomReact/static/css/881.dd280079.chunk.css.map",
+    "881.fae817d5.chunk.js.map": "/DiplomReact/static/js/881.fae817d5.chunk.js.map",
+    "929.a2b75a6c.chunk.css.map": "/DiplomReact/static/css/929.a2b75a6c.chunk.css.map",
+    "929.dc69661d.chunk.js.map": "/DiplomReact/static/js/929.dc69661d.chunk.js.map",
+    "787.a663bc8e.chunk.js.map": "/DiplomReact/static/js/787.a663bc8e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1ef3a49a.css",
+    "static/js/main.1fe900d7.js"
+  ]
+}
