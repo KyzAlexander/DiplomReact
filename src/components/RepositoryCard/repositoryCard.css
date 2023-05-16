@@ -1,34 +1,34 @@
-.repositoryCard { 
-    display: flex; 
-    flex-direction: column;   
-    max-width: 400px; 
-    width: 100%;   
-    border-style: solid; 
-    border-radius: 10px; 
-    border-color: aqua; 
-    box-shadow: 10px 5px 5px gray; 
-    margin-top: 10px;   
-    background-color: rgb(231, 231, 231) 
-  } 
-  .repositoryCard__title { 
-    display: flex; 
-    flex-direction: row; 
-    justify-content: space-between; 
-    align-items: center; 
-    max-width: 600px; 
-  } 
-  .title__name { 
-    color: blue; 
-  } 
-  .star { 
-    display: flex; 
-    flex-direction: row; 
-    align-items: center; 
-  } 
-  .star__number { 
-    margin-right: 10px; 
-  } 
-  .star__img { 
-    width: 20px; 
-    height: 20px; 
-  }
+.repositoryCard {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  width: 100%;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: aqua;
+  margin-top: 10px;
+  background-color: rgb(231, 231, 231);
+  padding: 15px;
+}
+.repositoryCard__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 600px;
+}
+.title__name {
+  color: blue;
+}
+.star {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.star__number {
+  margin-right: 10px;
+}
+.star__img {
+  width: 20px;
+  height: 20px;
+}
