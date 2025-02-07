@@ -47,3 +47,14 @@
 [10 наиболее активных контрибьютеров]
 
 Документация по API Github: https://docs.github.com/en
+
+### Используемые технологии:
+
+- JavaScript
+- React
+- React-router-dom
+- Redux
+- Redux-thunk
+- API Github
+
+
